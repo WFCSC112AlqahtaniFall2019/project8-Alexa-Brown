@@ -73,41 +73,21 @@ int main() {
         nextPriorityQueue.push(info);
 
     }
-    cout << "Hi";
+    //cout << "Hi";
     //printing the information into the txt files
     while (!nextStack.empty()){
-        outFileStack<< nextStack.top() <<endl;
-        nextStack.pop();
+        outFileStack << nextStack.top() <<endl; //outputting the data on the top to the stacked.txt file
+        nextStack.pop(); //delete the information to protect from memory leakage
     }
     while (!nextQueue.empty()){
-        outFileQueue<< nextQueue.front() <<endl;
-        nextQueue.pop();
+        outFileQueue << nextQueue.front() <<endl; //outputting the data at the front to the queue.txt file
+        nextQueue.pop(); //delete the information to protect from memory leakage
     }
     while (!nextPriorityQueue.empty()){
-        outFilePriorityQueue<< nextPriorityQueue.top() <<endl;
-        nextPriorityQueue.pop();
+        outFilePriorityQueue << nextPriorityQueue.top() <<endl; //outputting the data on the top to the sorted.txt file
+        nextPriorityQueue.pop(); //delete the information to protect from memory leakage
     }
-    //<< nextQueue.front();
-    /*  nextStack->print(outFileStack);
-      nextQueue->print(outFileQueue);
-      nextList->print(outFileSorted);*/
 
-
-    /*
-
-    //cout << "gets to print"<< endl;
-
-    //printing the information into the txt files
-    nextStack->print(outFileStack);
-    nextQueue->print(outFileQueue);
-    nextList->print(outFileSorted);
-
-    //delete all of the data Nodes to avoid memory leakage
-    while(nextStack->pop_head(other));
-    while(nextQueue->dequeue_head());
-     */
-
-    //cout << "gets to close"<< endl;
 
     //closing the files after using them to avoid memory leakage
     inFile.close();
