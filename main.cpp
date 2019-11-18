@@ -70,18 +70,22 @@ int main() {
         nextStack.push(info);
         // cout << "Here";
         nextQueue.push(info);
-        // nextPriorityQueue.push(info);
+        nextPriorityQueue.push(info);
 
     }
     cout << "Hi";
     //printing the information into the txt files
     while (!nextStack.empty()){
-        cout<< nextStack.top() <<endl;
+        outFileStack<< nextStack.top() <<endl;
         nextStack.pop();
     }
     while (!nextQueue.empty()){
-        cout<< nextQueue.front() <<endl;
+        outFileQueue<< nextQueue.front() <<endl;
         nextQueue.pop();
+    }
+    while (!nextPriorityQueue.empty()){
+        outFilePriorityQueue<< nextPriorityQueue.top() <<endl;
+        nextPriorityQueue.pop();
     }
     //<< nextQueue.front();
     /*  nextStack->print(outFileStack);

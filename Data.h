@@ -14,22 +14,20 @@ using namespace std;
 
 class Data {
     friend ostream& operator << (ostream& os, Data a);
-
 public:
-    Data();
-    Data(string c, int rank, double score, double g);
-
-    // bool operator > (const Data &d);
-
-    //  bool operator < (Data &d);
-
-private:
     string country;
     int happinessRank;
     double happinessScore;
     double GDP;
 
-public:
+
+    Data();
+    Data(string c, int rank, double score, double g);
+
+     friend bool operator > (const Data &d, const Data & d2);
+
+     friend bool operator < (const Data &d, const Data & d2);
+
     void setCountry (string c){
         country = c;
     }
