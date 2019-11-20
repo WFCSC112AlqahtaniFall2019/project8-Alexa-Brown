@@ -1,8 +1,9 @@
 /*
  * Alexa Brown
  * CSC 112
- * Project 7
+ * Project 8
  * Implemented stack, queue, and linked list sort classes to read in a file of data and output it to a textfile.
+ * Using templates this time in comparison to project 7
  */
 #include "Data.h"
 #include <iostream>
